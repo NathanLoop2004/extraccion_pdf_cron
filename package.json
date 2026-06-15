@@ -1,0 +1,27 @@
+{
+  "name": "documentos-pdf-job",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node documentos-pdf-job.mjs",
+    "dry-run": "node documentos-pdf-job.mjs --dry-run",
+    "one": "node documentos-pdf-job.mjs --limit=1",
+    "load-one": "node documentos-pdf-job.mjs --limit=1 --max-quality",
+    "load-five": "node documentos-pdf-job.mjs --limit=5 --max-quality",
+    "ocr-test": "node documentos-pdf-job.mjs --dry-run --limit=1 --force-ocr --ocr-max-pages=1",
+    "max-quality-test": "node documentos-pdf-job.mjs --dry-run --limit=1 --max-quality",
+    "max-quality": "node documentos-pdf-job.mjs --limit=5 --max-quality"
+  },
+  "dependencies": {
+    "@tesseract.js-data/eng": "^1.0.0",
+    "@tesseract.js-data/spa": "^1.0.0",
+    "axios": "^1.18.0",
+    "dotenv": "^17.4.2",
+    "mysql2": "^3.22.5",
+    "pdf2table": "^0.0.2",
+    "pdfjs-dist": "^6.0.227",
+    "puppeteer": "23.11.1",
+    "tesseract.js": "^7.0.0"
+  }
+}
